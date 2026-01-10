@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+/* Main Card */
+.weather-app {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px 25px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Title */
+.weather-app h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #f1f1f1;
+}
+
+.search-box input:focus {
+    background: #e8f0fe;
+}
+
+.search-box button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(79,172,254,0.5);
+}
+
+/* Weather Info */
+.weather-info {
+    margin-top: 15px;
+}
+
+.city {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.temp {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.humidity,
+.condition {
+    font-size: 14px;
+    margin: 6px 0;
+    opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .weather-app {
+        width: 90%;
+    }
+}
