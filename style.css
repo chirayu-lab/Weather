@@ -1,7 +1,13 @@
+/* ------------------------------------- */
+/*  Reset & Global Styles                 */
+/* ------------------------------------- */
+
+/* Apply border-box sizing to all elements for easier layout */
 * {
     box-sizing: border-box;
 }
 
+/* Body styling: full height, centered content, nice gradient background */
 body {
     margin: 0;
     height: 100vh;
@@ -12,63 +18,77 @@ body {
     background: linear-gradient(135deg, #74ebd5, #9face6);
 }
 
-/* Main Card */
+/* ------------------------------------- */
+/*  Main Weather App Card                 */
+/* ------------------------------------- */
+
 .weather-app {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    backdrop-filter: blur(10px);           /* Blur effect for frosted glass look */
     padding: 30px 25px;
-    border-radius: 20px;
+    border-radius: 20px;                  /* Rounded corners */
     width: 320px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-    animation: fadeIn 0.8s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25); /* Soft shadow for depth */
+    animation: fadeIn 0.8s ease;           /* Fade-in animation on load */
 }
 
-/* Title */
+/* ------------------------------------- */
+/*  Title Styling                         */
+/* ------------------------------------- */
+
 .weather-app h1 {
     margin-bottom: 20px;
     font-size: 24px;
-    letter-spacing: 1px;
+    letter-spacing: 1px; /* Slight spacing between letters */
 }
 
-/* Search */
+/* ------------------------------------- */
+/*  Search Box Styles                     */
+/* ------------------------------------- */
+
 .search-box {
     display: flex;
-    gap: 10px;
+    gap: 10px;           /* Space between input and button */
     margin-bottom: 25px;
 }
 
 .search-box input {
-    flex: 1;
+    flex: 1;             /* Take remaining space */
     padding: 10px 12px;
     border-radius: 10px;
     border: none;
     outline: none;
     font-size: 14px;
-    background: #f1f1f1;
+    background: #f1f1f1; /* Light gray background */
 }
 
+/* Input focus effect */
 .search-box input:focus {
-    background: #e8f0fe;
+    background: #e8f0fe; /* Light blue background on focus */
 }
 
 .search-box button {
     padding: 10px 14px;
     border-radius: 10px;
     border: none;
-    background: #4facfe;
+    background: #4facfe; /* Blue button */
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
 }
 
+/* Button hover effect */
 .search-box button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(79,172,254,0.5);
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(79,172,254,0.5); /* Soft shadow */
 }
 
-/* Weather Info */
+/* ------------------------------------- */
+/*  Weather Information Display           */
+/* ------------------------------------- */
+
 .weather-info {
     margin-top: 15px;
 }
@@ -89,10 +109,14 @@ body {
 .condition {
     font-size: 14px;
     margin: 6px 0;
-    opacity: 0.9;
+    opacity: 0.9; /* Slightly faded text */
 }
 
-/* Animation */
+/* ------------------------------------- */
+/*  Animations                            */
+/* ------------------------------------- */
+
+/* Fade-in animation for main card */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -104,9 +128,12 @@ body {
     }
 }
 
-/* Responsive */
+/* ------------------------------------- */
+/*  Responsive Styles                     */
+/* ------------------------------------- */
+
 @media (max-width: 400px) {
     .weather-app {
-        width: 90%;
+        width: 90%; /* Make card almost full width on small screens */
     }
 }
